@@ -94,5 +94,3 @@ set clipboard=unnamed                           " yanks to clipboard (OSX)
 set noswapfile                                  " disables swap files
 set undodir=~/.vim/undodir                      " sets undo directory
 set undofile                                    " enables use of undo file
-
-
