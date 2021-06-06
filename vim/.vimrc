@@ -11,10 +11,12 @@
 call plug#begin("~/.vim/plugged")
 Plug 'morhetz/gruvbox' 
 Plug 'dracula/vim', {'as':'dracula'}
+Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 call plug#end()
+
 
 " --------------------------------------------------
 " Text / Tab / Indentation
