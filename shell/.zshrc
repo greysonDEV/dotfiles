@@ -26,17 +26,14 @@ alias grs="git restore --staged"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias spotify="open -a Spotify"
 
-# Python Django
-alias check="python manage.py check"
-alias runserver="python manage.py runserver"
-
 # blender must be opened from terminal for add-on development
 alias blender="/Applications/Blender.app/Contents/MacOS/Blender"
+
 
 # --------------------------------------------------
 # Scripts
 # --------------------------------------------------
-
+# prints $PATH in human-readable way
 function path {
     printf "%s\n" $path
 }
