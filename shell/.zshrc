@@ -9,7 +9,7 @@
 # Aliases
 # --------------------------------------------------
 # configuring and sourcing .zshrc file
-alias config='vim ~/.zshrc'
+alias cfg='vim ~/.zshrc'
 alias src='source ~/.zshrc'
 
 # git
