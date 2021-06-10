@@ -8,9 +8,12 @@
 # --------------------------------------------------
 # Aliases
 # --------------------------------------------------
+# make tree ignore certain folders by default
+alias tree="tree -I __pycache__"
+
 # configuring and sourcing .zshrc file
-alias cfg='vim ~/.zshrc'
-alias src='source ~/.zshrc'
+alias cfg="vim ~/.zshrc"
+alias src="source ~/.zshrc"
 
 # git
 alias gs="git status"
