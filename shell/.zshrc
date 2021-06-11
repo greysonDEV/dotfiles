@@ -39,7 +39,7 @@ alias tree="ignoretree"
 # --------------------------------------------------
 # Scripts
 # --------------------------------------------------
-# ignores patterns in .treeignore for 'tree' command
+# ignores files/dits listed in .treeignore for tree command
 function ignoretree() {
     for arg in $@; do
         if [ $arg = "-I" ]; then
