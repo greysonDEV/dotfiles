@@ -15,6 +15,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 
@@ -63,10 +64,27 @@ nnoremap <C-l> <C-w>l
 
 
 " --------------------------------------------------
+" christoomey/vim-tmux-navigator 
+" https://github.com/christoomey/vim-tmux-navigator
+" --------------------------------------------------
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> {Left-Mapping} :TmuxNavigateLeft<cr>
+nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
+nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
+nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
+nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
+
+" Write all buffers before navigating from Vim to tmux pane
+let g:tmux_navigator_save_on_switch = 2
+
+
+" --------------------------------------------------
 " Colors
 " --------------------------------------------------
 colorscheme dracula
 set background=dark
+set t_Co=256                                    " set 256 colors
 
 
 " --------------------------------------------------
