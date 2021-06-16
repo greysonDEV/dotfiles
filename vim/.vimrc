@@ -93,7 +93,6 @@ set t_Co=256                                    " set 256 colors
 " --------------------------------------------------
 " Misc. Keymaps
 " --------------------------------------------------
-"
 " Leader Mappings
 map <space> <leader>
 map <leader>b :w !python3.9<cr>
