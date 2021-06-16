@@ -51,18 +51,13 @@ function ignoretree() {
     done
 
     PATTERNS=$(paste -d "|" -s ~/.treeignore)  
-    command tree -I $PATTERNS $@
+    # -a flag shows hidden files (dotfiles, etc.)
+    command tree -a -I $PATTERNS $@
 }
 
 # prints $PATH in human-readable way
 function path {
     printf "%s\n" $path
-}
-
-# compiling and running .java file
-function javar {
-  javac "$@".java
-  java "$@"
 }
 
 
