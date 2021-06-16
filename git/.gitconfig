@@ -1,0 +1,39 @@
+# ==================================================
+#
+# .gitconfig (Greyson Murray)
+#
+# ==================================================
+
+
+[user]
+	name = Greyson Murray
+	email = greyson.murray@gmail.com
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[alias]
+    # initialize new git repo & do initial setup
+    new = !git init && git add README.md && git commmit -m \"Initial commit.\"
+
+[color]
+    ui = true
+
+[color "branch"]
+    current = green reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = 237 bold # Grey23 (#3a3a3a)
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
