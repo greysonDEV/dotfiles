@@ -1,6 +1,6 @@
 # Greyson's OSX dotfiles!
 
-**Disclaimer:** Please do not blindly employ my dotfiles and the settings they entail before knowing what each one does. Use at your own risk!
+**Disclaimer:** Please do not hastily employ my dotfiles without understanding what each one entails and the settings they change. Use at your own risk!
 
 ### Contents
 * vim (plugin manager: [`vim-plug`](https://github.com/junegunn/vim-plug))
@@ -9,7 +9,7 @@
 
 ### Installation
 Simply clone this repository and drag and drop files as needed.<br>
-You can also create symbolic links, like so:
+Instead of dragging and dropping, creating symbolic links are also an option:
 ```
 $ ln dotfiles/vim/.vimrc ~/.vimrc
 ```
