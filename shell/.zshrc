@@ -78,4 +78,3 @@ function fixgitignore {
 # Prompt Customization
 # --------------------------------------------------
 PROMPT='%F{106}%B%n%b%f %F{015}%3~%f %F{015}%B$%b%f '
-RPROMPT='%F{015}%*%f'
