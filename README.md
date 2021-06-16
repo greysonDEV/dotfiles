@@ -11,8 +11,6 @@
 Simply clone this repository and drag and drop files as needed.<br>
 Instead of dragging and dropping, creating symbolic links are also an option:
 ```
-$ ln <source file> <destination>
-```
-```
+ln <source file> <destination>
 $ ln dotfiles/vim/.vimrc ~/.vimrc
 ```
