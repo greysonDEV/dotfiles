@@ -57,10 +57,10 @@ set splitbelow                                  " splits new window below
 set splitright                                  " splits new window at right
 
 " Ctrl + HJKL keys to move between splits
-nnoremap <C-h> <C-w>h 
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" nnoremap <C-h> <C-w>h 
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
 
 
 " --------------------------------------------------
@@ -68,12 +68,15 @@ nnoremap <C-l> <C-w>l
 " https://github.com/christoomey/vim-tmux-navigator
 " --------------------------------------------------
 let g:tmux_navigator_no_mappings = 1
-
-nnoremap <silent> {Left-Mapping} :TmuxNavigateLeft<cr>
-nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
-nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
-nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
-nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
+nmap <C-h> :TmuxNavigateLeft<cr>
+nmap <C-j> :TmuxNavigateDown<cr>
+nmap <C-k> :TmuxNavigateUp<cr>
+nmap <C-l> :TmuxNavigateRight<cr>
+" nnoremap <silent> {Left-Mapping} :TmuxNavigateLeft<cr>
+" nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
+" nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
+" nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
+" nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
 " Write all buffers before navigating from Vim to tmux pane
 let g:tmux_navigator_save_on_switch = 2
