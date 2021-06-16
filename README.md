@@ -8,7 +8,7 @@
 * shell (`zsh`)
 
 ### Installation
-Before installing, it is recommended to make a backup of your existing dotfiles. Once your dotfiles are backed up, simply clone this repository and drag and drop files as needed. Instead of dragging and dropping, creating symbolic links are also an option:
+Before installing, it is recommended to make a backup of your existing dotfiles. Once your dotfiles are backed up, simply clone this repository and drag and drop files as needed. Alternatively, creating symbolic links are recommended:
 ```
 ln <source file> <destination>
 $ ln dotfiles/vim/.vimrc ~/.vimrc
