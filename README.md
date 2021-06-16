@@ -1,9 +1,15 @@
 # Greyson's OSX dotfiles!
 
-These dotfiles cater to my wants and needs when developing and simply just using my device; feel free to take as needed!
-> I develop on OSX with the popular *`vim`/`tmux`* combination in the `zsh` shell.
+**Disclaimer:** Please do not blindly employ my dotfiles and the settings they entail before knowing what each one does. Use at your own risk!
+
+### Contents
+* vim (plugin manager: [`vim-plug`](https://github.com/junegunn/vim-plug))
+* tmux
+* shell (`zsh`)
 
 ### Installation
+Simply clone this repository and drag and drop files as needed.<br>
+You can also create symbolic links, like so:
 ```
-$ git clone https://github.com/greysonDEV/dotfiles
+$ ln dotfiles/vim/.vimrc ~/.vimrc
 ```
