@@ -24,9 +24,9 @@ alias gp="git push"
 alias gpom="git push origin main"
 alias gb="git branch"
 alias grs="git restore --staged"
+alias gd="git diff"
 
 # apps
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias spotify="open -a Spotify"
 
 # blender must be opened from terminal for add-on development
@@ -39,14 +39,17 @@ alias tree="ignoretree"
 # --------------------------------------------------
 # Scripts
 # --------------------------------------------------
-# ignores files/dits listed in .treeignore for tree command
+# ignores files/dirs listed in .treeignore for tree command
 function ignoretree() {
-    for arg in $@; do
-        if [ $arg = "-I" ]; then
+    for arg in $@
+    do
+        if [ $arg = "-I" ]
+        then
             command tree $@
             return
         fi
     done
+
     PATTERNS=$(paste -d "|" -s ~/.treeignore)  
     command tree -I $PATTERNS $@
 }
@@ -60,17 +63,6 @@ function path {
 function javar {
   javac "$@".java
   java "$@"
-}
-
-# enforcing .gitignore file
-function fixgitignore {
-	git add .
-	git commit -m "prepare .gitignore enforcement"
-	git rm -r --cached .
-	git add .
-	git reset -- .gitignore
-	git commit -m "enforcing .gitignore"
-	git push origin main
 }
 
 
