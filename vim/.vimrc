@@ -56,12 +56,6 @@ set sidescrolloff=10                            " 10 characters of buffer space 
 set splitbelow                                  " splits new window below 
 set splitright                                  " splits new window at right
 
-" Ctrl + HJKL keys to move between splits
-" nnoremap <C-h> <C-w>h 
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
-" nnoremap <C-l> <C-w>l
-
 
 " --------------------------------------------------
 " christoomey/vim-tmux-navigator 
