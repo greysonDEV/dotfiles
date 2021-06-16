@@ -66,13 +66,8 @@ nmap <C-h> :TmuxNavigateLeft<cr>
 nmap <C-j> :TmuxNavigateDown<cr>
 nmap <C-k> :TmuxNavigateUp<cr>
 nmap <C-l> :TmuxNavigateRight<cr>
-" nnoremap <silent> {Left-Mapping} :TmuxNavigateLeft<cr>
-" nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
-" nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
-" nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
-" nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
-" Write all buffers before navigating from Vim to tmux pane
+" write all buffers before navigating from Vim to tmux pane
 let g:tmux_navigator_save_on_switch = 2
 
 
@@ -87,11 +82,11 @@ set t_Co=256                                    " set 256 colors
 " --------------------------------------------------
 " Misc. Keymaps
 " --------------------------------------------------
-" Leader Mappings
+" leader Mappings
 map <space> <leader>
 map <leader>b :w !python3.9<cr>
 
-" Restricts use of arrow keys - use HJKL instead
+" restricts use of arrow keys - use HJKL instead
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <up> <nop>
