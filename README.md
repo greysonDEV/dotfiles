@@ -6,6 +6,7 @@
 * vim (plugin manager: [`vim-plug`](https://github.com/junegunn/vim-plug))
 * tmux
 * shell (`zsh`)
+* bin (scripts)
 
 ### Installation
 Before installing, it is recommended to make a backup of your existing dotfiles. Once your dotfiles are backed up, simply clone this repository and drag and drop files as needed. Alternatively, creating symbolic links are recommended:
