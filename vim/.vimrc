@@ -74,7 +74,7 @@ let g:tmux_navigator_save_on_switch = 2
 " --------------------------------------------------
 " Colors
 " --------------------------------------------------
-colorscheme dracula
+colorscheme gruvbox
 set background=dark
 set t_Co=256                                    " set 256 colors
 
