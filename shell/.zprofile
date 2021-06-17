@@ -23,3 +23,5 @@ export PATH="~/Developer/Flutter/flutter-installation/flutter/bin:${PATH}"
 # Flutter Pub
 export PATH="~/Developer/Flutter/flutter-installation/flutter/.pub-cache/bin:${PATH}"
 
+# Custom scripts
+export PATH="${PATH}:$HOME/bin/"
