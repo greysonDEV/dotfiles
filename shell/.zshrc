@@ -32,8 +32,11 @@ alias spotify="open -a Spotify"
 # blender must be opened from terminal for add-on development
 alias blender="/Applications/Blender.app/Contents/MacOS/Blender"
 
-# alias tree to go through ignoretree first
+# force tree to go through ignoretree first
 alias tree="ignoretree"
+
+# Django runserver
+alias runserver="python3.9 manage.py runserver"
 
 
 # --------------------------------------------------
