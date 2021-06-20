@@ -1,8 +1,0 @@
-#!/bin/zsh
-
-# Always open Finder windows in list-display mode
-defaults write com.apple.Finder FXPreferredViewStyle Nlsv
-
-# Show ~/Library folder by default
-chflags nohidden ~/Library
-
