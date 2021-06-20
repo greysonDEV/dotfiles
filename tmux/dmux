@@ -15,7 +15,6 @@ then
     SESSNAME=$1
 fi
     
-clear
 tmux new-session -s $SESSNAME -d
 tmux split-window -h
 # expand rightmost pane horizontally
