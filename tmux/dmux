@@ -12,9 +12,10 @@ fi
 SESSNAME="django-dev"
 if [ $1 ]
 then
-    SESSNAME = $1
+    SESSNAME=$1
 fi
     
+clear
 tmux new-session -s $SESSNAME -d
 tmux split-window -h
 # expand rightmost pane horizontally
@@ -24,5 +25,6 @@ tmux select-pane -t 0
 tmux split-window -v
 # shrink bottom-left pane vertically
 tmux resize-pane -D 10
+# select top-left pane
+tmux select-pane -t 0
 tmux attach-session -d
-printf ""
