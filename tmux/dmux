@@ -1,0 +1,28 @@
+#!/bin/zsh
+
+# Script to create tmux session suited for Python Django development.
+# Nothing special, just creates a named session with specific pane splits.
+
+if [ "$TERM_PROGRAM" = "tmux" ]
+then
+    printf "Exit current tmux session first!\n"
+    exit 0
+fi
+
+SESSNAME="django-dev"
+if [ $1 ]
+then
+    SESSNAME = $1
+fi
+    
+tmux new-session -s $SESSNAME -d
+tmux split-window -h
+# expand rightmost pane horizontally
+tmux resize-pane -L 20
+# select leftmost pane
+tmux select-pane -t 0
+tmux split-window -v
+# shrink bottom-left pane vertically
+tmux resize-pane -D 10
+tmux attach-session -d
+printf ""
