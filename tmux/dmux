@@ -9,21 +9,15 @@ then
     exit 0
 fi
 
-SESSNAME="django-dev"
-if [ $1 ]
-then
-    SESSNAME=$1
-fi
-    
+SESSNAME="${1:=django-dev}"
 tmux new-session -s $SESSNAME -d
 tmux split-window -h
-# expand rightmost pane horizontally
-tmux resize-pane -L 20
-# select leftmost pane
+tmux resize-pane -t 0 -x 70
+tmux split-window -t 0 -v
+tmux resize-pane -t 0 -y 50 
 tmux select-pane -t 0
-tmux split-window -v
-# shrink bottom-left pane vertically
-tmux resize-pane -D 10
-# select top-left pane
-tmux select-pane -t 0
+# clear pane to avoid highlighted % artifact
+# for some reason, have to sleep no less than 0.2s
+sleep 0.2
+tmux send-keys "clear" Enter
 tmux attach-session -d
