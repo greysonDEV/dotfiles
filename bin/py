@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+PYPATH="/Library/Frameworks/Python.framework/Versions/"
+NEWEST=$(ls $PYPATH | sort -n | tail -1)
+command "python$NEWEST"
