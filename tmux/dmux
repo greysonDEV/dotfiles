@@ -16,8 +16,4 @@ tmux resize-pane -t 0 -x 70
 tmux split-window -t 0 -v
 tmux resize-pane -t 0 -y 50 
 tmux select-pane -t 0
-# clear pane to avoid highlighted % artifact
-# for some reason, have to sleep no less than 0.2s
-sleep 0.2
-tmux send-keys "clear" Enter
 tmux attach-session -d
