@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+# Dynamically retrieves the newest installation of Python
+
+# path to Python versions
 PYPATH="/Library/Frameworks/Python.framework/Versions/"
-NEWEST=$(ls $PYPATH | sort -n | tail -1)
-command "python$NEWEST"
+# sort numerically, get largest version (most recent)
+PYCMD="python$(ls $PYPATH | sort -n | tail -1)"
+
+$PYCMD $@
