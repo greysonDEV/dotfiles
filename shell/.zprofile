@@ -25,3 +25,6 @@ export PATH="~/Developer/Flutter/flutter-installation/flutter/.pub-cache/bin:${P
 
 # Custom scripts
 export PATH="${PATH}:$HOME/bin/"
+
+# GNU make
+export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
