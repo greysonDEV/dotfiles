@@ -52,6 +52,13 @@ set sidescrolloff=10                            " 10 characters of buffer space 
 
 
 " --------------------------------------------------
+" File Explorer
+" --------------------------------------------------
+let g:netrw_liststyle=3
+let g:netrw_winsize = 15
+
+
+" --------------------------------------------------
 " Managing Splits
 " --------------------------------------------------
 set splitbelow                                  " splits new window below 
