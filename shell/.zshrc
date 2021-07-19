@@ -26,6 +26,9 @@ alias gb="git branch"
 alias grs="git restore --staged"
 alias gd="git diff"
 
+# Make
+alias remake="make clean && make"
+
 # apps
 alias spotify="open -a Spotify"
 
