@@ -16,6 +16,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-obsession'
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
@@ -52,6 +53,14 @@ set sidescrolloff=10                            " 10 characters of buffer space 
 
 
 " --------------------------------------------------
+" Colors
+" --------------------------------------------------
+set background=dark
+colorscheme gruvbox
+set t_Co=256                                    " set 256 colors
+
+
+" --------------------------------------------------
 " File Explorer
 " --------------------------------------------------
 let g:netrw_liststyle=3
@@ -80,14 +89,6 @@ let g:tmux_navigator_save_on_switch = 2
 
 
 " --------------------------------------------------
-" Colors
-" --------------------------------------------------
-colorscheme gruvbox
-set background=dark
-set t_Co=256                                    " set 256 colors
-
-
-" --------------------------------------------------
 " Misc. Keymaps
 " --------------------------------------------------
 " leader Mappings
@@ -113,3 +114,5 @@ set clipboard=unnamed                           " yanks to clipboard (OSX)
 set noswapfile                                  " disables swap files
 set undodir=~/.vim/undodir                      " sets undo directory
 set undofile                                    " enables use of undo file
+set timeoutlen=1000                             " mapping delays
+set ttimeoutlen=10                              " keycode delays
