@@ -31,3 +31,6 @@ export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
 # Ninja
 export PATH="$HOME/Developer/ninja:$PATH"
+
+# LLVM
+export PATH="/usr/local/opt/llvm/bin:$PATH"
