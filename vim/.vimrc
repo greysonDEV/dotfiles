@@ -94,6 +94,7 @@ let g:tmux_navigator_save_on_switch = 2
 " leader Mappings
 map <space> <leader>
 map <leader>b :w !python3.9<cr>
+map <leader>m :wa \| !make<cr>
 
 " restricts use of arrow keys - use HJKL instead
 nnoremap <left> <nop>
