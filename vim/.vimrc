@@ -9,8 +9,6 @@
 " Plugins (vim-plug)
 " --------------------------------------------------
 call plug#begin("~/.vim/plugged")
-Plug 'morhetz/gruvbox' 
-Plug 'dracula/vim', {'as':'dracula'}
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -18,7 +16,24 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-obsession'
 Plug 'christoomey/vim-tmux-navigator'
+
+Plug 'morhetz/gruvbox' 
+Plug 'dracula/vim', {'as':'dracula'}
+Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
+
+
+" --------------------------------------------------
+" Other Preferences
+" --------------------------------------------------
+set noerrorbells novisualbell                   " disables bells
+set clipboard=unnamed                           " yanks to clipboard (OSX)
+set noswapfile                                  " disables swap files
+set undodir=~/.vim/undodir                      " sets undo directory
+set undofile                                    " enables use of undo file
+set timeoutlen=1000                             " mapping delays
+set ttimeoutlen=10                              " keycode delays
+" set nocompatible
 
 
 " --------------------------------------------------
@@ -56,6 +71,8 @@ set sidescrolloff=10                            " 10 characters of buffer space 
 " Colors
 " --------------------------------------------------
 set background=dark
+set termguicolors
+set cursorline
 colorscheme gruvbox
 set t_Co=256                                    " set 256 colors
 
@@ -105,15 +122,3 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
-
-
-" --------------------------------------------------
-" Other Preferences
-" --------------------------------------------------
-set noerrorbells novisualbell                   " disables bells
-set clipboard=unnamed                           " yanks to clipboard (OSX)
-set noswapfile                                  " disables swap files
-set undodir=~/.vim/undodir                      " sets undo directory
-set undofile                                    " enables use of undo file
-set timeoutlen=1000                             " mapping delays
-set ttimeoutlen=10                              " keycode delays
