@@ -8,11 +8,6 @@
 # --------------------------------------------------
 # Configurations
 # --------------------------------------------------
-# enable vi mode
-set -o vi
-
-# source ignore files
-source ~/.zshcomplete
 
 
 # --------------------------------------------------
@@ -20,6 +15,9 @@ source ~/.zshcomplete
 # --------------------------------------------------
 # make tree ignore certain folders by default
 # alias tree="tree -I __pycache__"
+
+# vim
+alias vim="nvim"
 
 # configuring and sourcing .zshrc file
 alias cfg="vim ~/.zshrc"
@@ -76,8 +74,13 @@ function path {
     printf "%s\n" $path
 }
 
+fignore=(.o .out)
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # --------------------------------------------------
 # Prompt Customization
 # --------------------------------------------------
-PROMPT='%F{240}%B%n%b%f %3~ $ '
+# PROMPT='%F{247}%B%n%b%f %3~ $ '
+export PS1='%{%B%F{green}%}%n%b%{%f%}%{%F{white}%}@%{%f%}%{%B%F{green}%}%m %b%{%F{cyan}%}%3~ %{%f%}%% '
