@@ -20,16 +20,30 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'morhetz/gruvbox' 
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'arcticicestudio/nord-vim'
+Plug 'mhartington/oceanic-next'
+
+if has('nvim')
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
+
 call plug#end()
 
 
 " --------------------------------------------------
 " Other Preferences
 " --------------------------------------------------
+set wildignore=*.o
 set noerrorbells novisualbell                   " disables bells
 set clipboard=unnamed                           " yanks to clipboard (OSX)
 set noswapfile                                  " disables swap files
-set undodir=~/.vim/undodir                      " sets undo directory
+if has('nvim')
+    set guicursor=a:block
+else
+    set undodir=~/.vim/undodir
+endif
 set undofile                                    " enables use of undo file
 set timeoutlen=1000                             " mapping delays
 set ttimeoutlen=10                              " keycode delays
@@ -72,15 +86,17 @@ set sidescrolloff=10                            " 10 characters of buffer space 
 " --------------------------------------------------
 set background=dark
 set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set cursorline
-colorscheme gruvbox
-set t_Co=256                                    " set 256 colors
+colorscheme OceanicNext
+" set t_Co=256                                    " set 256 colors
 
 
 " --------------------------------------------------
 " File Explorer
 " --------------------------------------------------
-let g:netrw_liststyle=3
+let g:netrw_liststyle = 3
 let g:netrw_winsize = 15
 
 
@@ -104,16 +120,27 @@ nmap <C-l> :TmuxNavigateRight<cr>
 " write all buffers before navigating from Vim to tmux pane
 let g:tmux_navigator_save_on_switch = 2
 
+" --------------------------------------------------
+" NeoVim Keymaps
+" --------------------------------------------------
+if has('nvim')
+    inoremap <silent><expr> <c-space> coc#refresh()
+    nnoremap <leader>ff <cmd>Telescope find_files<cr>
+    nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+    nnoremap <leader>fb <cmd>Telescope buffers<cr>
+    nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+endif
 
 " --------------------------------------------------
 " Misc. Keymaps
 " --------------------------------------------------
-" leader Mappings
 map <space> <leader>
 map <leader>b :w !python3.9<cr>
-map <leader>m :wa \| !clear && make && make run<cr>
+map <leader>m :wa \| !clear && make<cr>
+nmap zz :wa<cr>
+nmap zqq :wqa<cr>
 
-" restricts use of arrow keys - use HJKL instead
+" restrict use of arrow keys - use HJKL instead
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <up> <nop>
