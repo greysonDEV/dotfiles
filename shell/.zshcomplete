@@ -1,1 +1,1 @@
-zstyle ':completion:*:*:vim:*' ignored-patterns '^*.(o|cpp):source-files' '*:all-files'
+zstyle ':completion::complete:vim:*:*' ignored-patterns '*.o'
