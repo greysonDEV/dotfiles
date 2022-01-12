@@ -4,7 +4,7 @@
 
 ### Flow
 * [nvim](https://github.com/neovim/neovim)
-  * Plugin Manager: [`vim-plug`](https://github.com/junegunn/vim-plug)
+  * [`vim-plug`](https://github.com/junegunn/vim-plug)
 * [tmux](https://github.com/tmux/tmux)
 
 ### Installation
