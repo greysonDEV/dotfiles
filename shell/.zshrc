@@ -53,6 +53,16 @@ alias runserver="python3.9 manage.py runserver"
 # --------------------------------------------------
 # Scripts
 # --------------------------------------------------
+# activates virtual environment, using .venv as default dir argument
+function activate() {
+    venvdir=".venv"
+    if [ $# -gt 0 ]
+    then
+        venvdir=$1
+    fi
+    source $venvdir/bin/activate
+}
+
 # ignores files/dirs listed in .treeignore for tree command
 function ignoretree() {
     for arg in $@
@@ -70,7 +80,7 @@ function ignoretree() {
 }
 
 # prints $PATH in human-readable way
-function path {
+function path() {
     printf "%s\n" $path
 }
 
@@ -83,4 +93,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Prompt Customization
 # --------------------------------------------------
 # PROMPT='%F{247}%B%n%b%f %3~ $ '
-export PS1='%{%B%F{green}%}%n%b%{%f%}%{%F{white}%}@%{%f%}%{%B%F{green}%}%m %b%{%F{cyan}%}%3~ %{%f%}%% '
+# export PS1='%{%B%F{yellow}%}%n%b%{%f%}@%{%B%F{yellow}%}%m %b%3~ %% '
+export PS1='%B%F{yellow}%n%f%b@%B%F{yellow}%m%f%b %3~ ⇉ '
