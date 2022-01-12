@@ -22,11 +22,13 @@ Plug 'dracula/vim', {'as':'dracula'}
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'arcticicestudio/nord-vim'
 Plug 'mhartington/oceanic-next'
+Plug 'lifepillar/vim-colortemplate'
 
 if has('nvim')
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'glepnir/zephyr-nvim'
 endif
 
 call plug#end()
@@ -89,8 +91,8 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set cursorline
-colorscheme OceanicNext
-" set t_Co=256                                    " set 256 colors
+colorscheme zephyr
+set t_Co=256                                    " set 256 colors
 
 
 " --------------------------------------------------
@@ -132,11 +134,20 @@ if has('nvim')
 endif
 
 " --------------------------------------------------
+" Vim Fugitive Keymaps
+" https://github.com/tpope/vim-fugitive
+" --------------------------------------------------
+map <leader>g :Git<cr>
+map <leader>gs :Git status<cr>
+map <leader>gp :Git push<cr>
+
+" --------------------------------------------------
 " Misc. Keymaps
 " --------------------------------------------------
 map <space> <leader>
 map <leader>b :w !python3.9<cr>
 map <leader>m :wa \| !clear && make<cr>
+map <leader>v :source $MYVIMRC<cr>
 nmap zz :wa<cr>
 nmap zqq :wqa<cr>
 
@@ -149,3 +160,11 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
+
+" --------------------------------------------------
+" Auto-Commands
+" --------------------------------------------------
+
+" set default comment to '// my comment' instead of '/* my comment */'
+autocmd FileType cpp setlocal commentstring=//\ %s
+autocmd FileType c setlocal commentstring=//\ %s
