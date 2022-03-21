@@ -17,6 +17,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-obsession'
 Plug 'christoomey/vim-tmux-navigator'
 
+Plug 'sainnhe/everforest'
 Plug 'morhetz/gruvbox' 
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'octol/vim-cpp-enhanced-highlight'
@@ -25,6 +26,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'lifepillar/vim-colortemplate'
 
 if has('nvim')
+    Plug 'EdenEast/nightfox.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -91,7 +93,7 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set cursorline
-colorscheme zephyr
+colorscheme everforest
 set t_Co=256                                    " set 256 colors
 
 
@@ -144,6 +146,7 @@ map <leader>gp :Git push<cr>
 " --------------------------------------------------
 " Misc. Keymaps
 " --------------------------------------------------
+nmap <esc> :noh<cr>
 map <space> <leader>
 map <leader>b :w !python3.9<cr>
 map <leader>m :wa \| !clear && make<cr>
@@ -168,3 +171,7 @@ inoremap <down> <nop>
 " set default comment to '// my comment' instead of '/* my comment */'
 autocmd FileType cpp setlocal commentstring=//\ %s
 autocmd FileType c setlocal commentstring=//\ %s
+
+" my custom language
+autocmd FileType kt setlocal commentstring=//\ %s
+autocmd BufRead,BufNewFile *.kt set filetype=kt
