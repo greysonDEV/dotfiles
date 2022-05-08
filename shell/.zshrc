@@ -94,11 +94,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # --------------------------------------------------
 # PROMPT='%F{247}%B%n%b%f %3~ $ '
 # export PS1='%{%B%F{yellow}%}%n%b%{%f%}@%{%B%F{yellow}%}%m %b%3~ %% '
-export PS1='%B%F{yellow}%n%f%b@%B%F{yellow}%m%f%b %3~ ⇉ '
-
-# --------------------------------------------------
-# Initialization
-# --------------------------------------------------
-if [ ! -n "$TMUX" ]; then
-    source ~/.loginmsg
-fi
+export PS1='%B%F{yellow}%n%f%b %3~ ⇉ '
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

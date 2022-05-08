@@ -1,5 +1,5 @@
 source $HOME/.vimrc
-source $HOME/.config/nvim/plug-config/coc.vim
+" source $HOME/.config/nvim/plug-config/coc.nvim
 
 lua << EOF
 require('telescope').setup{

@@ -173,5 +173,5 @@ autocmd FileType cpp setlocal commentstring=//\ %s
 autocmd FileType c setlocal commentstring=//\ %s
 
 " my custom language
-autocmd FileType kt setlocal commentstring=//\ %s
-autocmd BufRead,BufNewFile *.kt set filetype=kt
+autocmd FileType mg setlocal commentstring=//\ %s
+autocmd BufRead,BufNewFile *.mg set filetype=mg
