@@ -122,7 +122,7 @@ nmap <C-k> :TmuxNavigateUp<cr>
 nmap <C-l> :TmuxNavigateRight<cr>
 
 " write all buffers before navigating from Vim to tmux pane
-let g:tmux_navigator_save_on_switch = 2
+let g:tmux_navigator_save_on_switch = 2 
 
 " --------------------------------------------------
 " NeoVim Keymaps
@@ -164,10 +164,37 @@ inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
 
+"
+"nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references) coc: use tab for autocomplete
+
 " --------------------------------------------------
 " Auto-Commands
 " --------------------------------------------------
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" prevents shifting of gutter when sign appears
+set signcolumn=yes
+
+" --------------------------------------------------
+" Auto-Commands
+" --------------------------------------------------
 " set default comment to '// my comment' instead of '/* my comment */'
 autocmd FileType cpp setlocal commentstring=//\ %s
 autocmd FileType c setlocal commentstring=//\ %s
