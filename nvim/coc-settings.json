@@ -1,0 +1,6 @@
+{
+    "diagnostic.errorSign":   "@",
+    "diagnostic.infoSign":    "i",
+    "diagnostic.hintSign":    "?",
+    "diagnostic.warningSign": "!"
+}
