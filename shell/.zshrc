@@ -17,6 +17,7 @@ set -o ignoreeof
 # alias tree="tree -I __pycache__"
 
 # vim
+alias vi="nvim"
 alias vim="nvim"
 
 # configuring and sourcing .zshrc file
