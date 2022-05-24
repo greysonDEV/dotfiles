@@ -20,6 +20,9 @@ set -o ignoreeof
 alias vi="nvim"
 alias vim="nvim"
 
+# misc.
+alias c=clear # I clear a LOT
+
 # configuring and sourcing .zshrc file
 alias cfg="vim ~/.zshrc"
 alias src="source ~/.zshrc"
@@ -47,8 +50,11 @@ alias blender="/Applications/Blender.app/Contents/MacOS/Blender"
 # force tree to go through ignoretree first
 alias tree="ignoretree"
 
+# Python
+alias py="python3.10"
+
 # Django runserver
-alias runserver="python3.9 manage.py runserver"
+alias runserver="python3.10 manage.py runserver"
 
 
 # --------------------------------------------------
@@ -97,3 +103,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # export PS1='%{%B%F{yellow}%}%n%b%{%f%}@%{%B%F{yellow}%}%m %b%3~ %% '
 export PS1='%B%F{yellow}%n%f%b %3~ ⇉ '
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
