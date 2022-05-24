@@ -16,7 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-obsession'
 Plug 'christoomey/vim-tmux-navigator'
-
+Plug 'jparise/vim-graphql'
 Plug 'sainnhe/everforest'
 Plug 'morhetz/gruvbox' 
 Plug 'dracula/vim', {'as':'dracula'}
@@ -148,7 +148,7 @@ map <leader>gp :Git push<cr>
 " --------------------------------------------------
 nmap <esc> :noh<cr>
 map <space> <leader>
-map <leader>b :w !python3.9<cr>
+map <leader>b :w !python3.10<cr>
 map <leader>m :wa \| !clear && make<cr>
 map <leader>v :source $MYVIMRC<cr>
 nmap zz :wa<cr>
