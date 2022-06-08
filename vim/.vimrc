@@ -17,20 +17,21 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-obsession'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jparise/vim-graphql'
-Plug 'sainnhe/everforest'
+Plug 'posva/vim-vue'
 Plug 'morhetz/gruvbox' 
 Plug 'dracula/vim', {'as':'dracula'}
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'arcticicestudio/nord-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'lifepillar/vim-colortemplate'
+Plug 'drewtempelmeyer/palenight.vim'
 
 if has('nvim')
     Plug 'EdenEast/nightfox.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'glepnir/zephyr-nvim'
 endif
 
 call plug#end()
@@ -93,7 +94,7 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set cursorline
-colorscheme everforest
+colorscheme palenight
 set t_Co=256                                    " set 256 colors
 
 
@@ -128,7 +129,7 @@ let g:tmux_navigator_save_on_switch = 2
 " NeoVim Keymaps
 " --------------------------------------------------
 if has('nvim')
-    inoremap <silent><expr> <c-space> coc#refresh()
+    " inoremap <silent><expr> <c-space> coc#refresh()
     nnoremap <leader>ff <cmd>Telescope find_files<cr>
     nnoremap <leader>fg <cmd>Telescope live_grep<cr>
     nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -164,19 +165,15 @@ inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
 
-"
-"nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references) coc: use tab for autocomplete
-
-" --------------------------------------------------
-" Auto-Commands
-" --------------------------------------------------
+" coc
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" --------------------------------------------------
+" Auto-Commands
+" --------------------------------------------------
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -195,6 +192,8 @@ set signcolumn=yes
 " --------------------------------------------------
 " Auto-Commands
 " --------------------------------------------------
+autocmd BufRead,BufNewFile ~/Developer/dpl/apps/* set tabstop=2 softtabstop=2 shiftwidth=2
+
 " set default comment to '// my comment' instead of '/* my comment */'
 autocmd FileType cpp setlocal commentstring=//\ %s
 autocmd FileType c setlocal commentstring=//\ %s
