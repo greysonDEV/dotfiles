@@ -1,6 +1,8 @@
 # Greyson's OSX dotfiles!
 
-**Disclaimer:** Please do not hastily employ my dotfiles without understanding what each one entails and the settings they change. Use at your own risk!
+**Disclaimer:** Please do not hastily replace your dotfiles with these without
+understanding what each one entails and the settings they change. Use at your
+own risk!
 
 ### Flow
 * [nvim](https://github.com/neovim/neovim)
@@ -8,8 +10,12 @@
 * [tmux](https://github.com/tmux/tmux)
 
 ### Installation
-Before installing, it is recommended to make a backup of your existing dotfiles. Once your dotfiles are backed up, simply clone this repository and drag and drop files as needed. Alternatively, you can simply just do symbolic links:
+Before installing, consider making a backup of your existing dotfiles. Clone
+this repository to wherever you'd like. It's recommended to make symbolic links
+where the source file is in a `dotfiles/` directory and the destination file
+is where the file should be in your system.
 ```
-ln <source file> <destination>
+ln <source> <destination>
 $ ln dotfiles/vim/.vimrc ~/.vimrc
+$ ln dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
