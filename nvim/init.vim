@@ -8,6 +8,8 @@ require('telescope').setup{
         layout_config = { height = 0.8, width = 0.4 },
         file_ignore_patterns = {
             "%.o",
+            "%.woff",
+            "%.woff2",
             "%.dSYM",
             "%.png",
             "%.jpg",
