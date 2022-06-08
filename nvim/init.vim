@@ -3,6 +3,7 @@ source $HOME/.vimrc
 lua << EOF
 require('telescope').setup{
     defaults = {
+        preview = false,
         file_ignore_patterns = {
             "%.o",
             "%.dSYM",
@@ -10,7 +11,7 @@ require('telescope').setup{
             "%.jpg",
             "%.pyc",
             "pycache",
-            "./node%_modules"
+            "node_modules/.*"
         }
     }
 }
