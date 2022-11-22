@@ -4,7 +4,6 @@
 "
 " ==================================================
 
-
 " --------------------------------------------------
 " Plugins (vim-plug)
 " --------------------------------------------------
@@ -29,7 +28,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 if has('nvim')
     Plug 'EdenEast/nightfox.nvim'
     Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-elescope/telescope.nvim'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
@@ -58,9 +57,9 @@ set ttimeoutlen=10                              " keycode delays
 " --------------------------------------------------
 " Text / Tab / Indentation
 " --------------------------------------------------
-set tabstop=4                                   " sets width of tab to four spaces 
-set softtabstop=4                               " removes/inserts four spaces when deleting/inserting a tab 
-set shiftwidth=4                                " inserts four spaces when auto-indenting 
+set tabstop=2                                   " sets width of tab to four spaces 
+set softtabstop=2                               " removes/inserts four spaces when deleting/inserting a tab 
+set shiftwidth=2                                " inserts four spaces when auto-indenting 
 set expandtab                                   " converts tabs to spaces as they are typed
 set smartindent                                 " indents based on syntax of file
 set nowrap                                      " disable text wrapping if line is too long
