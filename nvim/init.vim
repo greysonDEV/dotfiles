@@ -5,11 +5,12 @@ require('telescope').setup{
     defaults = {
         preview = false,
         layout_strategy = 'vertical',
-        layout_config = { height = 0.8, width = 0.4 },
+        layout_config = { height = 0.8 },
         file_ignore_patterns = {
             "%.o",
             "%.woff",
             "%.woff2",
+            "%.ttf",
             "%.dSYM",
             "%.ico",
             "%.png",
