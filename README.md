@@ -7,7 +7,11 @@ own risk!
 ### Flow
 * [nvim](https://github.com/neovim/neovim)
   * [`vim-plug`](https://github.com/junegunn/vim-plug)
+  * [`telescope.nvim`](https://github.com/nvim-telescope/telescope.nvim)
+  * [`built-in LSP`](https://neovim.io/doc/user/lsp.html)
+  * [`floaterm`](https://github.com/voldikss/vim-floaterm)
 * [tmux](https://github.com/tmux/tmux)
+* [iTerm2](https://iterm2.com/)
 
 ### Installation
 Before installing, consider making a backup of your existing dotfiles. Clone
