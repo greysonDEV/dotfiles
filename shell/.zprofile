@@ -34,3 +34,5 @@ export PATH="$HOME/Developer/ninja:$PATH"
 
 # LLVM
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+echo "HELLO, WORLD"

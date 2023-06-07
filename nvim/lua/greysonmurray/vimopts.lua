@@ -26,11 +26,6 @@ vim.opt.ignorecase = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
 
-vim.opt.background = "dark"
+vim.g.zenbones_lightness = 'bright'
 
-require("gruvbox").setup({
-  overrides = {
-    SignColumn = {bg = "#282828"}
-  }
-})
-vim.cmd([[colorscheme gruvbox]])
+-- vim.diagnostic.config({ virtual_text = false })

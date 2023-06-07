@@ -1,16 +1,26 @@
-vim.cmd [[packadd packer.nvim]]
-
-return require('packer').startup(function()
+return require('packer').startup(function(use)
   use "wbthomason/packer.nvim"
-  use("numToStr/Comment.nvim")
-  use "ellisonleao/gruvbox.nvim"
+  use "numToStr/Comment.nvim"
   use "christoomey/vim-tmux-navigator"
   use "Raimondi/delimitMate"
-  use("kylechui/nvim-surround")
+  use "kylechui/nvim-surround"
   use "nvim-lua/plenary.nvim"
   use "nvim-telescope/telescope.nvim"
   use "nvim-treesitter/nvim-treesitter"
-  use 'voldikss/vim-floaterm'
+  use "voldikss/vim-floaterm"
+
+  -- Colors
+  use "rktjmp/lush.nvim"
+  use {
+    "mcchrish/zenbones.nvim",
+    requires = "rktjmp/lush.nvim"
+  }
+  use "ellisonleao/gruvbox.nvim"
+  use "sainnhe/gruvbox-material"
+  use "Shatur/neovim-ayu"
+  use "savq/melange-nvim"
+  use "olivercederborg/poimandres.nvim"
+  use "shaunsingh/nord.nvim"
 
   -- LSP
   use "neovim/nvim-lspconfig"

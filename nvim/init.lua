@@ -1,4 +1,5 @@
+require("greysonmurray.packer")
+require("greysonmurray.colors")
 require("greysonmurray.vimopts")
 require("greysonmurray.remap")
-require("greysonmurray.packer")
 require("greysonmurray.config")
